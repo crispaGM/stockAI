@@ -1,8 +1,10 @@
 .container-login {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 50px 15px;
+    height: 100vh;
 }
 
 .container-login .logo {
@@ -12,7 +14,7 @@
     background: #fff;
     padding: 10px;
     border-radius: 14px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .container-login .logo img {
@@ -29,25 +31,25 @@
     background: transparent;
     width: 100%;
     max-width: 600px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .container-login form input {
     background: transparent;
     width: 100%;
     padding: 10px 0;
-    padding-bottom: 5px;
     border: 0;
     border-bottom: 2px solid #fff;
     margin-bottom: 25px;
     font-size: 14px;
     font-weight: 600;
-    color: #f2990c;
+    color: #f2d30c;
+    font-family: "Montserrat", sans-serif;
 }
 
 .container-login form input::placeholder {
     font-weight: 600;
-    color: #f2990c;
+    color: #f2d30c;
 }
 
 button.button-login {
@@ -56,16 +58,15 @@ button.button-login {
     font-size: 14px;
     color: #fff;
     font-weight: 600;
-    border: 2px solid #f2990c;
+    border: 2px solid #f2d30c;
     border-radius: 4px;
-    padding: 10px 25px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    padding: 15px 25px;
+    margin: 10px 0px;
     cursor: pointer;
 }
 
 button.button-login:hover {
-    background: #f2990c;
+    background: #f2d30c;
     transition: 0.3s;
 }
 

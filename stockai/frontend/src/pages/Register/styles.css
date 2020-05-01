@@ -9,11 +9,17 @@
 .container-register h2 {
     color: #0c87f2;
     margin-bottom: 15px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .container-register h4 {
     color: #0c87f2;
     margin-bottom: 50px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .container-register form {
@@ -28,20 +34,47 @@
 .container-register form p {
     font-size: 16px;
     font-weight: 500;
-    color: #f2990c;
+    color: #f2d30c;
     text-align: center;
-    margin: 10px 0px;
+    margin: 15px 0px;
 }
 
 .container-register form h5 {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
-    color: #f2990c;
+    color: #f2d30c;
     margin-bottom: 5px;
 }
 
 .container-register form input {
-    border: 1px solid #0c87f2;
+    background: transparent;
+    border: 1px solid #bce0fd;
+    color: #7b7b7b;
+    border-radius: 4px;
     padding: 15px 10px;
     margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+}
+
+button.button-register {
+    width: 90%;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid #0c87f2;
+    background: transparent;
+    color: #269aff;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 15px 25px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button.button-register:hover {
+    background: #0c87f2;
+    color: #ffffff;
+    transition: 0.3s;
 }

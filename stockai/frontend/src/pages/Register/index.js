@@ -22,6 +22,23 @@ export default function Register () {
                     <input type="password" name="password" id="password" />
 
                     <p>Informações pessoais</p>
+
+                    <h5>Data de Nascimento</h5>
+                    <input type="date" name="birthday" id="birthday" />
+
+                    <h5>CPF</h5>
+                    <input type="text" name="cpf" id="cpf" />
+
+                    <h5>Estado</h5>
+                    <input type="text" name="uf" id="uf" />
+
+                    <h5>Cidade</h5>
+                    <input type="text" name="city" id="city" />
+
+                    <h5>Telefone</h5>
+                    <input type="text" name="phone" id="phone" />
+
+                    <button className="button-register" type="submit">Continuar</button>
                 </form>
             </section>
         </div>
