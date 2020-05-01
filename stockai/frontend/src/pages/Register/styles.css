@@ -1,0 +1,47 @@
+.container-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    padding: 50px 15px;
+}
+
+.container-register h2 {
+    color: #0c87f2;
+    margin-bottom: 15px;
+}
+
+.container-register h4 {
+    color: #0c87f2;
+    margin-bottom: 50px;
+}
+
+.container-register form {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.container-register form p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #f2990c;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.container-register form h5 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #f2990c;
+    margin-bottom: 5px;
+}
+
+.container-register form input {
+    border: 1px solid #0c87f2;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+}
