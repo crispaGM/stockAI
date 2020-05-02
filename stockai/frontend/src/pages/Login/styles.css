@@ -5,6 +5,7 @@
     align-items: center;
     padding: 50px 15px;
     height: 100vh;
+    background: linear-gradient(180deg, #130e9a, #281267);
 }
 
 .container-login .logo {
