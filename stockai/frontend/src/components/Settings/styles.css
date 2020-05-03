@@ -1,0 +1,99 @@
+.settings-panel {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 15px 25px;
+    background: linear-gradient(
+        180deg,
+        #221475 0%,
+        #221475 400px,
+        rgba(241, 243, 249, 1) 400px,
+        rgba(241, 243, 249, 1) 100%
+    );
+}
+
+.settings-panel span.page {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 25px 0;
+}
+
+.settings-panel span.page h2 {
+    margin: 0;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.settings-panel .card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.settings-panel .card-row .card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 240px;
+    box-shadow: 0px 3px 6px #1717172d;
+    position: relative;
+}
+
+.settings-panel .card-row h5 {
+    color: #8898aa;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.settings-panel .card-row h4 {
+    color: #4d4f5c;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.settings-panel .card-row h6 {
+    color: #4d4f5c;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.settings-panel .card-row h6 span {
+    color: #f53e13;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.settings-panel .card-row i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2d30c;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 991px) {
+    .settings-panel .card-row {
+        flex-direction: column;
+        padding: 0px 15px;
+    }
+
+    .settings-panel .card-row .card + .card {
+        margin-top: 15px;
+    }
+
+    .settings-panel .card-row .card {
+        max-width: 80%;
+    }
+}
