@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8e9d6349-a31a-46f7-9598-a68feb1c0ae0" name="Default" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="ProjectId" id="1bM5Fm8VyZhB4lqt0pCKByl3zkI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../../Program Files/nodejs/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\StockAI\stockAI\app\Http\Controllers" />
+      <recent name="C:\Projetos\gestorAtletica\gestorAtleticaAPI\app\Http\Controllers\Admin" />
+      <recent name="C:\Projetos\gestorAtletica\gestorAtleticaAPI\app\Models" />
+      <recent name="C:\Projetos\gestorAtletica\app\Models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\StockAI\gestor-atleticas-api" />
+      <recent name="C:\Projetos\gestorAtletica\gestorAtleticaAPI\app\Models\Permissions" />
+      <recent name="C:\Projetos\gestorAtletica\gestorAtleticaAPI\app\Http\Controllers" />
+      <recent name="C:\Projetos\gestorAtletica\gestorAtleticaAPI\app\Models" />
+      <recent name="C:\Projetos\gestorAtletica\gestorAtleticaAPI\app\Enums" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\digo_\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e9d6349-a31a-46f7-9598-a68feb1c0ae0" name="Default" comment="" />
+      <created>1551097870336</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551097870336</updated>
+      <workItem from="1551097876873" duration="5269000" />
+      <workItem from="1551212565869" duration="2581000" />
+      <workItem from="1551234513566" duration="10242000" />
+      <workItem from="1551806561785" duration="1898000" />
+      <workItem from="1551809923329" duration="23455000" />
+      <workItem from="1552099885492" duration="1830000" />
+      <workItem from="1552249391987" duration="16644000" />
+      <workItem from="1553353766205" duration="76000" />
+      <workItem from="1556844169170" duration="2148000" />
+      <workItem from="1556931112072" duration="1800000" />
+      <workItem from="1556995759339" duration="90000" />
+      <workItem from="1557004904625" duration="396000" />
+      <workItem from="1557523518826" duration="1609000" />
+      <workItem from="1557526783147" duration="818000" />
+      <workItem from="1557674503965" duration="394000" />
+      <workItem from="1557687106691" duration="25000" />
+      <workItem from="1557688020271" duration="2060000" />
+      <workItem from="1557693164022" duration="30000" />
+      <workItem from="1557693312836" duration="1198000" />
+      <workItem from="1557696000924" duration="2480000" />
+      <workItem from="1557713926258" duration="6193000" />
+      <workItem from="1557800080857" duration="4767000" />
+      <workItem from="1558463151067" duration="9892000" />
+      <workItem from="1558474020091" duration="10036000" />
+      <workItem from="1558806751353" duration="20277000" />
+      <workItem from="1558887963003" duration="26876000" />
+      <workItem from="1559087905849" duration="611000" />
+      <workItem from="1559682238172" duration="30792000" />
+      <workItem from="1560049834319" duration="39152000" />
+      <workItem from="1561153530065" duration="703000" />
+      <workItem from="1562368549391" duration="2096000" />
+      <workItem from="1562465617780" duration="2016000" />
+      <workItem from="1563487940649" duration="3898000" />
+      <workItem from="1563637234764" duration="4811000" />
+      <workItem from="1563656824184" duration="3277000" />
+      <workItem from="1563845268916" duration="519000" />
+      <workItem from="1564179116626" duration="10342000" />
+      <workItem from="1564332537689" duration="16350000" />
+      <workItem from="1564425559088" duration="665000" />
+      <workItem from="1564444032997" duration="1466000" />
+      <workItem from="1564447004339" duration="1984000" />
+      <workItem from="1564519181584" duration="3583000" />
+      <workItem from="1564673088543" duration="602000" />
+      <workItem from="1564877875470" duration="653000" />
+      <workItem from="1564940405602" duration="3808000" />
+      <workItem from="1564968735644" duration="840000" />
+      <workItem from="1565146325903" duration="697000" />
+      <workItem from="1565482971128" duration="710000" />
+      <workItem from="1565532345300" duration="2581000" />
+      <workItem from="1565577624133" duration="2523000" />
+      <workItem from="1566267722775" duration="1629000" />
+      <workItem from="1566273132394" duration="54000" />
+      <workItem from="1566330251622" duration="1232000" />
+      <workItem from="1566335521961" duration="3387000" />
+      <workItem from="1566491905538" duration="902000" />
+      <workItem from="1566498971748" duration="1323000" />
+      <workItem from="1566746468917" duration="1785000" />
+      <workItem from="1566787401806" duration="1807000" />
+      <workItem from="1567043796802" duration="1804000" />
+      <workItem from="1567133088150" duration="707000" />
+      <workItem from="1567220112417" duration="5598000" />
+      <workItem from="1567357541181" duration="11709000" />
+      <workItem from="1568051164875" duration="1582000" />
+      <workItem from="1568143969969" duration="588000" />
+      <workItem from="1568248772130" duration="3911000" />
+      <workItem from="1568300043272" duration="578000" />
+      <workItem from="1568317839699" duration="292000" />
+      <workItem from="1568318196760" duration="7400000" />
+      <workItem from="1568481808592" duration="615000" />
+      <workItem from="1568579661975" duration="3928000" />
+      <workItem from="1568668838483" duration="2110000" />
+      <workItem from="1568746797096" duration="3660000" />
+      <workItem from="1588429047181" duration="1435000" />
+      <workItem from="1588430543708" duration="5279000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="392" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588432320589">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1588432320589" />
+    <state x="456" y="83" width="672" height="676" key="search.everywhere.popup" timestamp="1588433959628">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="83" width="672" height="676" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1588433959628" />
+  </component>
+</project>
