@@ -3,7 +3,25 @@
     flex-direction: column;
     background: #ffffff;
     padding: 50px 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     height: 100vh;
+    position: relative;
+}
+
+.container-welcome .back-link {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #0c87f2;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container-welcome .back-link:hover {
+    color: #0c87f2dd;
+    transition: 0.3s;
 }
 
 .container-welcome h1 {
@@ -11,12 +29,13 @@
     color: #432b96;
     font-weight: 600;
 }
+
 .container-welcome img {
     width: 480px;
     max-width: 90%;
     height: auto;
     background: #269aff;
-    margin: 70px auto;
+    margin: 30px auto;
 }
 .container-welcome h2 {
     font-size: 20px;

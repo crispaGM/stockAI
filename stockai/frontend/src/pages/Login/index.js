@@ -8,33 +8,31 @@ import logo from '../../assets/logo.jpg';
 
 export default function Login () {
     return (
-        <div id="box">
-            <section className="container-login">
-                <div className="logo">
-                    <img src={logo} alt="" />
-                </div>
-                <form onSubmit={() => { }}>
-                    <input
-                        type="email"
-                        // value={id}
-                        // onChange={e => setId(e.target.value)}
-                        placeholder="Email"
-                    />
+        <section className="container-login">
+            <div className="logo">
+                <img src={logo} alt="" />
+            </div>
+            <form onSubmit={() => { }}>
+                <input
+                    type="email"
+                    // value={id}
+                    // onChange={e => setId(e.target.value)}
+                    placeholder="Email"
+                />
 
-                    <input
-                        type="password"
-                        // value={id}
-                        // onChange={e => setId(e.target.value)}
-                        placeholder="Senha"
-                    />
+                <input
+                    type="password"
+                    // value={id}
+                    // onChange={e => setId(e.target.value)}
+                    placeholder="Senha"
+                />
 
-                    <button className="button-login" type="submit">Entrar</button>
+                <button className="button-login" type="submit">Entrar</button>
 
-                    <Link className="back-link" to="/register">
-                        Não possui cadastro? Clique aqui
+                <Link className="back-link" to="/register">
+                    Não possui cadastro? Clique aqui
                     </Link>
-                </form>
-            </section>
-        </div>
+            </form>
+        </section>
     );
 }

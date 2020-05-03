@@ -1,0 +1,227 @@
+.container-dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.container-dashboard .sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.container-dashboard .sidebar .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.container-dashboard .sidebar .title span {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.container-dashboard .sidebar ul {
+    list-style: none;
+    margin: 0;
+}
+
+.container-dashboard .sidebar ul li a {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fb6340;
+}
+
+.container-dashboard .sidebar ul li:nth-child(2n) a {
+    color: #11cdef;
+}
+
+.container-dashboard .sidebar ul li a span {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #172b4d;
+}
+
+.container-dashboard .sidebar ul li a:hover {
+    color: #7764e4;
+    background: #f6f9fc;
+    transition: 0.3s;
+}
+
+.container-dashboard .sidebar ul li a:hover span {
+    color: #7764e4;
+    transition: 0.3s;
+}
+
+.container-dashboard .panel {
+    padding: 15px 25px;
+    width: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(38, 154, 255, 1) 0%,
+        rgba(38, 154, 255, 1) 50%,
+        rgba(241, 243, 249, 1) 50%,
+        rgba(241, 243, 249, 1) 100%
+    );
+}
+
+.search-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-input input {
+    border: 0;
+    border-radius: 25px;
+    width: 250px;
+    height: 50px;
+    padding: 10px 15px;
+    padding-left: 40px;
+    color: #172b4d;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    box-shadow: 0px 3px 6px #1717172d;
+}
+
+.search-input input::placeholder {
+    font-weight: 500;
+}
+
+.search-input span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    left: 13px;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    color: #172b4d;
+}
+
+.top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+}
+
+.options i {
+    font-size: 20px;
+    color: #ffffff;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.options .session-user {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.options .session-user i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #8898aa;
+    margin-right: 15px;
+}
+
+.panel h2 {
+    color: #ffffff;
+    font-size: 25px;
+    padding: 35px 0;
+}
+
+.card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-row .card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 240px;
+    box-shadow: 0px 3px 6px #1717172d;
+    position: relative;
+}
+
+.card-row h5 {
+    color: #8898aa;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.card-row h4 {
+    color: #4d4f5c;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.card-row h6 {
+    color: #4d4f5c;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.card-row h6 span {
+    color: #f53e13;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.card-row i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2d30c;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 991px) {
+    .card-row {
+        flex-direction: column;
+        padding: 0px 15px;
+    }
+
+    .card-row .card + .card {
+        margin-top: 15px;
+    }
+
+    .card-row .card {
+        max-width: 80%;
+    }
+}

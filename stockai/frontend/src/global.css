@@ -14,30 +14,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-#box {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 1199px) {
-  #box {
-    max-width: 800px;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  #box {
-    max-width: 600px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #box {
-    max-width: 100%;
-  }
-}
-
 h1,
 h2,
 h3,

@@ -4,6 +4,22 @@
     align-items: center;
     background: #ffffff;
     padding: 50px 15px;
+    width: 100%;
+    position: relative;
+}
+
+.container-register .back-link {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #0c87f2;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container-register .back-link:hover {
+    color: #0c87f2dd;
+    transition: 0.3s;
 }
 
 .container-register h2 {
@@ -52,6 +68,7 @@
     color: #7b7b7b;
     border-radius: 4px;
     padding: 15px 10px;
+    width: 100%;
     margin-bottom: 15px;
     font-size: 14px;
     font-weight: 400;
