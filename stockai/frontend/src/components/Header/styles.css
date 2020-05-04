@@ -77,3 +77,25 @@
     color: #8898aa;
     margin-right: 15px;
 }
+
+@media screen and (max-width: 991px) {
+    .top-row {
+        flex-direction: column;
+    }
+
+    .top-row .options {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .top-row .options i {
+        margin-right: 0;
+    }
+
+    .top-row .options .session-user {
+        margin-left: 10px;
+    }
+}

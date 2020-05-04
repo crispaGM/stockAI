@@ -30,8 +30,8 @@ export default function Header () {
                     <i>
                         <FiUser />
                     </i>
-                Luis Carlos
-            </div>
+                    <span>Luis Carlos</span>
+                </div>
             </div>
         </div>
     );

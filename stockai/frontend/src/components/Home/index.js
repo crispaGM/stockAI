@@ -47,7 +47,7 @@ export default class Home extends React.Component {
 
     render () {
         return (
-            <div className="home-panel" >
+            <div className="home-panel">
                 <Header />
 
                 <span className='page'><FiHome /> <h2>Home</h2></span>

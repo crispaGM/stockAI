@@ -1,6 +1,6 @@
 .container-dashboard {
     display: flex;
-    width: 100%;
+    flex: 1;
 }
 
 .container-dashboard .nav.nav-pills {
@@ -62,4 +62,15 @@
 
 .container-dashboard .tab-content .tab-pane {
     width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    .container-dashboard{
+        flex-direction: column;
+    }
+
+    .container-dashboard .nav.nav-pills .title {
+        display: flex;
+        justify-content: space-between;
+    }
 }
