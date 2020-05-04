@@ -7,31 +7,62 @@ import './styles.css';
 import logo from '../../assets/logo.jpg';
 
 export default function Login () {
+    const history = useHistory();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    async function handleLogin (e) {
+        e.preventDefault();
+
+        const data = {
+            email,
+            password,
+        };
+
+        try {
+            const response = await api.post('auth/login', data);
+
+            console.log(response.data);
+
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('userId', response.data.user.id);
+            localStorage.setItem('name', response.data.user.name);
+
+            console.log(localStorage.token);
+
+            history.push('/home');
+        } catch (error) {
+            alert('Usuário ou senha incorretos, tente novamente');
+        }
+    }
+
     return (
         <section className="container-login">
             <div className="logo">
                 <img src={logo} alt="" />
             </div>
-            <form onSubmit={() => { }}>
+            <form onSubmit={handleLogin}>
                 <input
                     type="email"
-                    // value={id}
-                    // onChange={e => setId(e.target.value)}
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
                     placeholder="Email"
+                    required
                 />
 
                 <input
                     type="password"
-                    // value={id}
-                    // onChange={e => setId(e.target.value)}
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}
                     placeholder="Senha"
+                    required
                 />
 
                 <button className="button-login" type="submit">Entrar</button>
 
                 <Link className="back-link" to="/register">
                     Não possui cadastro? Clique aqui
-                    </Link>
+                </Link>
             </form>
         </section>
     );

@@ -4,10 +4,9 @@
     background: #ffffff;
     padding: 50px 15px;
     width: 100%;
-    max-width: 600px;
     margin: 0 auto;
-    height: 100vh;
     position: relative;
+    height: 100vh;
 }
 
 .container-welcome .back-link {
@@ -28,6 +27,7 @@
     font-size: 36px;
     color: #432b96;
     font-weight: 600;
+    margin-left: 30px;
 }
 
 .container-welcome img {
