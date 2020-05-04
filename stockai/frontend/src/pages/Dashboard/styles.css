@@ -9,18 +9,24 @@
     padding: 15px;
 }
 
-.container-dashboard .nav.nav-pills .title {
+.container-dashboard .nav.nav-pills .logo {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    justify-content: center;
+    margin-bottom: 5px;
     font-weight: 500;
     font-size: 20px;
 }
 
-.container-dashboard .nav.nav-pills .title span {
+.container-dashboard .nav.nav-pills .logo img {
+    width: 120px;
+    margin: 0 auto;
+}
+
+/* .container-dashboard .nav.nav-pills .title span {
     font-size: 18px;
     margin-right: 10px;
-}
+} */
 
 .container-dashboard .nav.nav-pills .nav-item .nav-link {
     display: flex;
@@ -65,7 +71,7 @@
 }
 
 @media screen and (max-width: 991px) {
-    .container-dashboard{
+    .container-dashboard {
         flex-direction: column;
     }
 

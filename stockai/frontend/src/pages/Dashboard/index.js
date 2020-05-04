@@ -10,6 +10,8 @@ import Reports from '../../components/Reports';
 import Profile from '../../components/Profile';
 import Settings from '../../components/Settings';
 
+import logo from '../../assets/logo.jpg';
+
 import './styles.css';
 
 export default function Dashboard () {
@@ -17,8 +19,8 @@ export default function Dashboard () {
         <div className="container-dashboard">
             <Tab.Container defaultActiveKey="home">
                 <Nav variant="pills" className="flex-column">
-                    <div className='title'>
-                        <span>Bastos Laticínios</span> <FiMenu />
+                    <div className='logo'>
+                        <img src={logo} alt="" />
                     </div>
                     <Nav.Item>
                         <Nav.Link eventKey="home">
@@ -30,21 +32,21 @@ export default function Dashboard () {
                             <FiPackage /> <span>Produtos</span>
                         </Nav.Link>
                     </Nav.Item>
-                    <Nav.Item>
+                    {/* <Nav.Item>
                         <Nav.Link eventKey='reports'>
                             <FiFileText /> <span>Relatórios</span>
                         </Nav.Link>
-                    </Nav.Item>
+                    </Nav.Item> */}
                     <Nav.Item>
                         <Nav.Link eventKey="profile">
                             <FiUser /> <span>Perfil</span>
                         </Nav.Link>
                     </Nav.Item>
-                    <Nav.Item>
+                    {/* <Nav.Item>
                         <Nav.Link eventKey='settings'>
                             <FiSettings /> <span>Configurações</span>
                         </Nav.Link>
-                    </Nav.Item>
+                    </Nav.Item> */}
                 </Nav>
 
                 <Tab.Content>
@@ -54,15 +56,15 @@ export default function Dashboard () {
                     <Tab.Pane eventKey="products">
                         <Products />
                     </Tab.Pane>
-                    <Tab.Pane eventKey="reports">
+                    {/* <Tab.Pane eventKey="reports">
                         <Reports />
-                    </Tab.Pane>
+                    </Tab.Pane> */}
                     <Tab.Pane eventKey="profile">
                         <Profile />
                     </Tab.Pane>
-                    <Tab.Pane eventKey="settings">
+                    {/* <Tab.Pane eventKey="settings">
                         <Settings />
-                    </Tab.Pane>
+                    </Tab.Pane> */}
                 </Tab.Content>
 
             </Tab.Container>
