@@ -279,16 +279,10 @@
 }
 
 .modal .modal-content .modal-footer {
-    border: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 15px 25px;
-    padding-top: 0;
+    display: none;
 }
 
-.modal .modal-content .modal-footer button {
+.modal .modal-content .modal-body form button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -303,9 +297,11 @@
     outline: 0;
     font-size: 14px;
     font-weight: 500;
+    margin: 0 auto;
+    margin-top: 15px;
 }
 
-.modal .modal-content .modal-footer button:hover {
+.modal .modal-content .modal-body button:hover {
     background: #269affdd;
     transition: 0.3s;
 }

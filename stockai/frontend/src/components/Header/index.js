@@ -22,9 +22,7 @@ export default function Header () {
         try {
             await api.get('auth/logout');
 
-            localStorage.setItem('token', '');
-            localStorage.setItem('userId', '');
-            localStorage.setItem('name', '');
+            localStorage.clear();
 
             history.push('/');
         } catch (error) {

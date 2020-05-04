@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { Table, Row, Col, Modal, Button } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+
+import { Table, Row, Col, Modal } from 'react-bootstrap';
 
 import {
     FiPackage,
@@ -10,9 +12,43 @@ import {
 
 import Header from '../Header';
 
+import api from '../../services/api';
+
 import './styles.css';
 
 function RegisterProductModal (props) {
+    const history = useHistory();
+
+    const userId = localStorage.getItem('userId');
+
+    const [product_code, setProductCode] = useState('');
+    const [product_name, setProductName] = useState('');
+    const [product_qtd, setProductQtd] = useState('');
+    const [product_buy_value, setProductBuyValue] = useState('');
+    const [product_sale_value, setProductSaleValue] = useState('');
+    const [product_life, setProductLife] = useState('');
+
+    async function handleRegisterProduct (e) {
+        e.preventDefault();
+
+        const data = {
+            product_code,
+            product_name,
+            product_qtd,
+            product_buy_value,
+            product_sale_value,
+            product_life,
+        };
+
+        try {
+            const response = await api.post(`${userId}/product`, data);
+
+            history.push('/home');
+        } catch (error) {
+            alert('Falha no cadastro de produto, tente novamente');
+        }
+    }
+
     return (
         <Modal
             {...props}
@@ -29,36 +65,86 @@ function RegisterProductModal (props) {
             <Modal.Body>
                 <h5>Informações sobre o produto</h5>
 
-                <form>
+                <form onSubmit={handleRegisterProduct}>
                     <h6>Código</h6>
-                    <input type="text" name="product-code" id="product-code" />
+                    <input
+                        type="text"
+                        value={product_code}
+                        onChange={e => setProductCode(e.target.value)}
+                        required
+                    />
 
                     <h6>Nome</h6>
-                    <input type="text" name="product-name" id="product-name" />
+                    <input
+                        type="text"
+                        value={product_name}
+                        onChange={e => setProductName(e.target.value)}
+                        required
+                    />
 
                     <h6>Quantidade</h6>
-                    <input type="text" name="product-qtd" id="product-qtd" />
+                    <input
+                        type="text"
+                        value={product_qtd}
+                        onChange={e => setProductQtd(e.target.value)}
+                        required
+                    />
 
                     <h6>Valor unitário</h6>
-                    <input type="text" name="product-buy-value" id="product-buy-value" />
+                    <input
+                        type="text"
+                        value={product_buy_value}
+                        onChange={e => setProductBuyValue(e.target.value)}
+                        required
+                    />
 
                     <h6>Valor de venda</h6>
-                    <input type="text" name="product-sale-value" id="product-sale-value" />
+                    <input
+                        type="text"
+                        value={product_sale_value}
+                        onChange={e => setProductSaleValue(e.target.value)}
+                        required
+                    />
 
                     <h6>Data de validade</h6>
-                    <input type="date" name="product-life" id="product-life" />
+                    <input
+                        type="date"
+                        value={product_life}
+                        onChange={e => setProductLife(e.target.value)}
+                        required
+                    />
+
+                    <button type="submit">Cadastrar</button>
                 </form>
             </Modal.Body>
 
-            <Modal.Footer>
-                <button onClick={() => { }}>Cadastrar</button>
-            </Modal.Footer>
+            <Modal.Footer></Modal.Footer>
         </Modal>
     );
 }
 
 export default function Products () {
     const [modalShow, setModalShow] = useState(false);
+    const [products, setProducts] = useState([]);
+
+    const name = localStorage.getItem('name');
+    const userId = localStorage.getItem('userId');
+
+    useEffect(() => {
+        api.get(`${userId}/product`).then(response => {
+            setProducts(response.data);
+        })
+    }, [userId]);
+
+    async function handleDeleteProduct (id) {
+        try {
+            await api.delete(`${userId}/product/${id}`);
+
+            setProducts(products.filter(product => product.id !== id));
+        } catch (error) {
+            alert('Erro ao deletar produto, tente novamente.')
+        }
+    }
 
     return (
         <div className="products-panel">
@@ -104,7 +190,20 @@ export default function Products () {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        {products.map(product => (
+                            <tr key={product.id}>
+                                <td>{product.id}</td>
+                                <td>{product.product_code}</td>
+                                <td>{product.product_name}</td>
+                                <td>{product.product_qtd}</td>
+                                <td>{product.product_buy_value}</td>
+                                <td>{product.product_sale_value}</td>
+                                <td>{product.product_life}</td>
+                                <td><FiTrash2 onClick={() => handleDeleteProduct(product.id)} /></td>
+                            </tr>
+                        ))}
+
+                        {/* <tr>
                             <td>1</td>
                             <td>Table cell</td>
                             <td>Molho de Tomate - Tarantella</td>
@@ -203,7 +302,8 @@ export default function Products () {
                             <td>Table cell</td>
                             <td>Table cell</td>
                             <td><FiTrash2 /></td>
-                        </tr>
+                        </tr> */}
+
                     </tbody>
                 </Table>
             </div>
