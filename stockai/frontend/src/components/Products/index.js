@@ -20,7 +20,7 @@ function RegisterProductModal (props) {
     const history = useHistory();
 
     const dominio = localStorage.getItem('dominio');
-    const token = localStorage.getItem('access_token');
+    const token = localStorage.getItem('token');
 
     const [product_code, setProductCode] = useState('');
     const [product_name, setProductName] = useState('');
@@ -134,7 +134,7 @@ export default function Products () {
     const [products, setProducts] = useState([]);
 
     const dominio = localStorage.getItem('dominio');
-    const token = localStorage.getItem('access_token');
+    const token = localStorage.getItem('token');
 
     useEffect(() => {
         api.get(`${dominio}/produto`, {
@@ -142,7 +142,7 @@ export default function Products () {
                 Authorization: `Bearer ${token}`,
             }
         }).then(response => {
-            setProducts(response.data);
+            setProducts(response.data.data.data);
         })
     }, [dominio, token]);
 
@@ -216,108 +216,6 @@ export default function Products () {
                                 <td><FiTrash2 onClick={() => handleDeleteProduct(product.id)} /></td>
                             </tr>
                         ))}
-
-                        {/* <tr>
-                            <td>1</td>
-                            <td>Table cell</td>
-                            <td>Molho de Tomate - Tarantella</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td><FiTrash2 /></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Table cell</td>
-                            <td>Molho de Tomate - Tarantella</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td><FiTrash2 /></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Table cell</td>
-                            <td>Molho de Tomate - Tarantella</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td><FiTrash2 /></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Table cell</td>
-                            <td>Molho de Tomate - Tarantella</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td><FiTrash2 /></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Table cell</td>
-                            <td>Molho de Tomate - Tarantella</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td><FiTrash2 /></td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Table cell</td>
-                            <td>Molho de Tomate - Tarantella</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td><FiTrash2 /></td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Table cell</td>
-                            <td>Molho de Tomate - Tarantella</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td><FiTrash2 /></td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Table cell</td>
-                            <td>Molho de Tomate - Tarantella</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td><FiTrash2 /></td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>Table cell</td>
-                            <td>Molho de Tomate - Tarantella</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td><FiTrash2 /></td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>Table cell</td>
-                            <td>Molho de Tomate - Tarantella</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td><FiTrash2 /></td>
-                        </tr> */}
-
                     </tbody>
                 </Table>
             </div>

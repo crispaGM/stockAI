@@ -93,7 +93,7 @@ export default function Profile () {
 
                         <h3>{nome_estabelecimento}</h3>
 
-                        {/* <Row>
+                        <Row>
                             <Col sm={11}>
                                 <div className="information">
                                     <h5>CNPJ</h5>
@@ -127,7 +127,7 @@ export default function Profile () {
                             </Col>
 
                             <Col sm={4}></Col>
-                        </Row> */}
+                        </Row>
                     </div>
                 </Col>
             </Row>

@@ -12,7 +12,7 @@ export default function Login () {
     const [password, setPassword] = useState('');
 
     const token = localStorage.getItem('access_token');
-    
+
     async function handleLogin (e) {
         e.preventDefault();
 
@@ -28,12 +28,13 @@ export default function Login () {
                 }
             });
 
-            console.log(response.data);
+            console.log(response.data.data);
 
-            localStorage.setItem('userId', response.data.user.id);
-            localStorage.setItem('name', response.data.user.name);
-            localStorage.setItem('dominio', response.data.user.dominio);
-            localStorage.setItem('nome_estabelecimento', response.data.user.nome_estabelecimento);
+            localStorage.setItem('token', response.data.data.token);
+            localStorage.setItem('userId', response.data.data.user.id);
+            localStorage.setItem('name', response.data.data.user.name);
+            localStorage.setItem('dominio', response.data.data.unidade_negocio.dominio);
+            localStorage.setItem('nome_estabelecimento', response.data.data.unidade_negocio.nome);
 
             history.push('/home');
         } catch (error) {

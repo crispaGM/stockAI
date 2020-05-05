@@ -18,9 +18,15 @@ import './styles.css';
 export default function Header () {
     const history = useHistory();
 
+    const token = localStorage.getItem('token');
+
     async function handleLogout () {
         try {
-            await api.get('auth/logout');
+            await api.get('auth/logout', {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                }
+            });
 
             localStorage.clear();
 
