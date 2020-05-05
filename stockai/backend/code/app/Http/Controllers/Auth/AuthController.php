@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\Permissions\Role;
 use App\Models\Permissions\Token;
+use App\Models\Unidade;
 use App\Models\Usuario;
 use App\Services\AuthenticateService;
 use DateTime;
@@ -96,6 +97,11 @@ class AuthController extends Controller
                 'name'             => $request->name,
                 'email'             => $request->email,
                 'password'             => bcrypt($request->password),
+            ]);
+
+            Unidade::create([
+               'dominio'  => $request->dominio,
+               'nome'  => $request->nome_estabelecimento,
             ]);
 
 //            $role = Role::first();

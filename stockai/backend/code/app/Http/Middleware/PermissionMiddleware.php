@@ -24,28 +24,30 @@ class PermissionMiddleware
         if (!auth()->user()) {
             return response(Lang::get('auth.unauthorized'), 401);
         }
-        return $next($request);
 
 
-       /* $actions     = $request->route()->getAction();
+        $actions     = $request->route()->getAction();
         $permissions = isset($actions['permissions']) ? $actions['permissions'] : null;
 
         $unidade_negocio_id = null;
 
         if($request->route('dominio')){
-            $unidadeNegocio = Unidade::where('une_dominio', $request->route('dominio'))->first();
-            $unidade_negocio_id = $unidadeNegocio ? $unidadeNegocio->unidade_negocio_id : null;
+            $unidadeNegocio = Unidade::where('dominio', $request->route('dominio'))->first();
+            $unidade_negocio_id = $unidadeNegocio ? $unidadeNegocio->id : null;
 
             $request->merge(['unidade_negocio_id' => $unidade_negocio_id]);
 
             $request->route()->forgetParameter('dominio');
         }
 
-        if (auth()->user()->hasPermissionTo($permissions, $unidade_negocio_id) || !$permissions) {
-            return $next($request);
-        }
+//        if (auth()->user()->hasPermissionTo($permissions, $unidade_negocio_id) || !$permissions) {
+//            return $next($request);
+//        }
 
-        return response(Lang::get('auth.unauthorized'), 401);*/
+        return $next($request);
+
+
+        return response(Lang::get('auth.unauthorized'), 401);
 
     }
 }

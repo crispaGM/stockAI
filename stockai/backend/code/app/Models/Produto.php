@@ -6,26 +6,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class Produto extends Model
 {
-    protected $table = 'com_produto';
-    protected $primaryKey = 'produto_id';
+    protected $table = 'produtos';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'unidade_negocio_id',
         'categoria_id',
-        'pro_nome',
-        'pro_valor_custo',
-        'pro_valor',
-        'pro_valor_socio',
-        'pro_descricao',
-        'pro_imagem',
-        'pro_cadastro_ativo',
+        'nome',
+        'valor_custo',
+        'valor_venda',
+        'qtd_estoque',
+        'data_validade',
     ];
 
 
-    public function fotosProduto()
+    /*public function fotosProduto()
     {
         return $this->hasMany(FotoProduto::class, 'produto_id');
-    }
+    }*/
 
     public function categoria()
     {

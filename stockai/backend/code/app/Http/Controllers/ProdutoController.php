@@ -18,13 +18,15 @@ class ProdutoController extends Controller
     private function rulesValidator($data, $rulesExtra = [])
     {
         $rules = array_merge([
-            'categoria_id'                    => 'required|exists:com_categoria,categoria_id',
-            'unidade_negocio_id'              => 'required',
-            'pro_nome'                        => 'required',
-            'pro_valor_custo'                 => 'required',
-            'pro_valor'                       => 'required',
-            'fotos_produto.*.fop_link_imagem' => 'required_without:fotos_produto.*.imagem',
-            'fotos_produto.*.imagem'          => 'required_without:fotos_produto.*.fop_link_imagem',
+            'categoria_id'               => 'required|exists:categorias,id',
+            'unidade_negocio_id'         => 'required',
+            'nome'                        => 'required',
+            'qtd_estoque'                => 'required',
+            'data_validade'                        => 'required|date',
+            'valor_custo'                 => 'required',
+            'valor_venda'                       => 'required',
+//            'fotos_produto.*.fop_link_imagem' => 'required_without:fotos_produto.*.imagem',
+//            'fotos_produto.*.imagem'          => 'required_without:fotos_produto.*.fop_link_imagem',
         ], $rulesExtra);
 
         $messages         = [];
@@ -42,7 +44,7 @@ class ProdutoController extends Controller
     public function index(Request $request)
     {
         $limit = $request->query->get('limit', 15);
-        return $this->success(Produto::with('categoria:categoria_id,cat_nome')->paginate($limit, ['produto_id', 'categoria_id', 'pro_nome', 'pro_valor_custo', 'pro_valor', 'pro_valor_socio']));
+        return $this->success(Produto::with('categoria:id,name')->paginate($limit, ['id', 'categoria_id', 'nome', 'valor_custo', 'valor_venda', 'qtd_estoque']));
     }
 
     /**
@@ -61,7 +63,7 @@ class ProdutoController extends Controller
             $produto = Produto::create($request->all());
 
             /** Fotos do Produto*/
-            foreach ($request->fotos_produto as $foto) {
+            /*foreach ($request->fotos_produto as $foto) {
 
                 if (!empty($foto['imagem'])) {
                     $imagem = $foto['imagem'];
@@ -77,7 +79,7 @@ class ProdutoController extends Controller
                     $fotoProduto->fop_link_imagem = ImageUtils::saveImage($imagem, $repositoryDir, $fileName, $fotoProduto->fop_link_imagem);
                     $fotoProduto->save();
                 }
-            }
+            }*/
 
             return $produto;
         });
