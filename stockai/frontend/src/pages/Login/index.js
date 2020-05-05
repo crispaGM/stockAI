@@ -27,6 +27,8 @@ export default function Login () {
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('userId', response.data.user.id);
             localStorage.setItem('name', response.data.user.name);
+            localStorage.setItem('dominio', response.data.user.dominio);
+            localStorage.setItem('nome_estabelecimento', response.data.user.nome_estabelecimento);
 
             console.log(localStorage.token);
 

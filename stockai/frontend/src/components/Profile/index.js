@@ -12,6 +12,9 @@ import Business from '../../assets/business.svg';
 import './styles.css';
 
 export default function Profile () {
+    const name = localStorage.getItem('name');
+    const nome_estabelecimento = localStorage.getItem('nome_estabelecimento');
+
     return (
         <div className="profile-panel">
             <Header />
@@ -25,7 +28,7 @@ export default function Profile () {
                             <FiUser />
                         </div>
 
-                        <h3>Luis Carlos</h3>
+                        <h3>{name}</h3>
 
                         <Row>
                             <Col sm={7}>
@@ -88,9 +91,9 @@ export default function Profile () {
                             <img src={Business} alt="" />
                         </div>
 
-                        <h3>Bastos Laticínios</h3>
+                        <h3>{nome_estabelecimento}</h3>
 
-                        <Row>
+                        {/* <Row>
                             <Col sm={11}>
                                 <div className="information">
                                     <h5>CNPJ</h5>
@@ -124,7 +127,7 @@ export default function Profile () {
                             </Col>
 
                             <Col sm={4}></Col>
-                        </Row>
+                        </Row> */}
                     </div>
                 </Col>
             </Row>

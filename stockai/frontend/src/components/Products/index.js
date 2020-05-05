@@ -19,7 +19,7 @@ import './styles.css';
 function RegisterProductModal (props) {
     const history = useHistory();
 
-    const userId = localStorage.getItem('userId');
+    const dominio = localStorage.getItem('dominio');
 
     const [product_code, setProductCode] = useState('');
     const [product_name, setProductName] = useState('');
@@ -41,7 +41,7 @@ function RegisterProductModal (props) {
         };
 
         try {
-            const response = await api.post(`${userId}/produto`, data);
+            const response = await api.post(`${dominio}/produto`, data);
 
             history.push('/home');
         } catch (error) {
@@ -127,17 +127,17 @@ export default function Products () {
     const [modalShow, setModalShow] = useState(false);
     const [products, setProducts] = useState([]);
 
-    const userId = localStorage.getItem('userId');
+    const dominio = localStorage.getItem('dominio');
 
     useEffect(() => {
-        api.get(`${userId}/produto`).then(response => {
+        api.get(`${dominio}/produto`).then(response => {
             setProducts(response.data);
         })
-    }, [userId]);
+    }, [dominio]);
 
     async function handleDeleteProduct (id) {
         try {
-            await api.delete(`${userId}/produto/${id}`);
+            await api.delete(`${dominio}/produto/${id}`);
 
             setProducts(products.filter(product => product.id !== id));
         } catch (error) {
