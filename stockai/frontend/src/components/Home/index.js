@@ -83,22 +83,29 @@ export default class Home extends React.Component {
 
                 <Row>
                     <Col sm={12} md={7}>
-                        <div className="chart-sales">
-                            <p>Overview</p>
-                            <Line
-                                data={chartExample1[this.state.chartExample1Data]}
-                                options={chartExample1.options}
-                                getDatasetAtEvent={e => console.log(e)}
-                            />
+                        <div className="grafico">
+                            <p>OVERVIEW</p>
+                            <h3>Valor de Venda</h3>
+                            <div className="chart-sales">
+                                <Line
+                                    data={chartExample1[this.state.chartExample1Data]}
+                                    options={chartExample1.options}
+                                    getDatasetAtEvent={e => console.log(e)}
+                                />
+                            </div>
                         </div>
                     </Col>
 
                     <Col sm={12} md={5}>
-                        <div className="chart-loses">
-                            <Bar
-                                data={chartExample2.data}
-                                options={chartExample2.options}
-                            />
+                        <div className="grafico1">
+                            <p>PERFORMANCE</p>
+                            <h3>Produtos Estragados</h3>
+                            <div className="chart-loses">
+                                <Bar
+                                    data={chartExample2.data}
+                                    options={chartExample2.options}
+                                />
+                            </div>
                         </div>
                     </Col>
                 </Row>

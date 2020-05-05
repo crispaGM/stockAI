@@ -69,6 +69,10 @@
     margin-right: 5px;
 }
 
+.home-panel .card-row .card:nth-child(2) h6 span {
+    color: #2dce98;
+}
+
 .home-panel .card-row i {
     position: absolute;
     top: 15px;
@@ -90,19 +94,35 @@
 }
 
 .home-panel .chart-sales {
+    height: 400px;
+}
+
+.home-panel .grafico,
+.home-panel .grafico1 {
     background: #ffffff;
     padding: 15px;
     border-radius: 10px;
-    height: 400px;
     box-shadow: 0px 3px 6px #1717172d;
 }
 
+.home-panel .grafico p,
+.home-panel .grafico1 p {
+    font-size: 11px;
+    color: #8898aa;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.home-panel .grafico h3,
+.home-panel .grafico1 h3 {
+    font-size: 20px;
+    color: #172b4d;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
 .home-panel .chart-loses {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
     height: 400px;
-    box-shadow: 0px 3px 6px #1717172d;
 }
 
 @media screen and (max-width: 991px) {
@@ -123,7 +143,7 @@
         margin-top: 0;
     }
 
-    .home-panel .chart-loses {
+    .home-panel .grafico1 {
         margin-top: 25px;
     }
 }

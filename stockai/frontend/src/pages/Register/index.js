@@ -35,6 +35,8 @@ export default function Register () {
         try {
             const response = await api.post('auth/signup', data);
 
+            localStorage.setItem('token', response.data.access_token);
+
             console.log(response.data);
 
             history.push('/');

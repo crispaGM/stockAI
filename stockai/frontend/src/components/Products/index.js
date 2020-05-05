@@ -20,6 +20,7 @@ function RegisterProductModal (props) {
     const history = useHistory();
 
     const dominio = localStorage.getItem('dominio');
+    const token = localStorage.getItem('access_token');
 
     const [product_code, setProductCode] = useState('');
     const [product_name, setProductName] = useState('');
@@ -32,16 +33,21 @@ function RegisterProductModal (props) {
         e.preventDefault();
 
         const data = {
-            product_code,
-            product_name,
-            product_qtd,
-            product_buy_value,
-            product_sale_value,
-            product_life,
+            categoria_id: 1,
+            codigo: product_code,
+            nome: product_name,
+            qtd_estoque: product_qtd,
+            valor_custo: product_buy_value,
+            valor_venda: product_sale_value,
+            data_validade: product_life,
         };
 
         try {
-            const response = await api.post(`${dominio}/produto`, data);
+            const response = await api.post(`${dominio}/produto`, data, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                }
+            });
 
             history.push('/home');
         } catch (error) {
@@ -128,16 +134,25 @@ export default function Products () {
     const [products, setProducts] = useState([]);
 
     const dominio = localStorage.getItem('dominio');
+    const token = localStorage.getItem('access_token');
 
     useEffect(() => {
-        api.get(`${dominio}/produto`).then(response => {
+        api.get(`${dominio}/produto`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            }
+        }).then(response => {
             setProducts(response.data);
         })
-    }, [dominio]);
+    }, [dominio, token]);
 
     async function handleDeleteProduct (id) {
         try {
-            await api.delete(`${dominio}/produto/${id}`);
+            await api.delete(`${dominio}/produto/${id}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                }
+            });
 
             setProducts(products.filter(product => product.id !== id));
         } catch (error) {
@@ -192,12 +207,12 @@ export default function Products () {
                         {products.map(product => (
                             <tr key={product.id}>
                                 <td>{product.id}</td>
-                                <td>{product.product_code}</td>
-                                <td>{product.product_name}</td>
-                                <td>{product.product_qtd}</td>
-                                <td>{product.product_buy_value}</td>
-                                <td>{product.product_sale_value}</td>
-                                <td>{product.product_life}</td>
+                                <td>{product.codigo}</td>
+                                <td>{product.nome}</td>
+                                <td>{product.qtd_estoque}</td>
+                                <td>{product.valor_custo}</td>
+                                <td>{product.valor_venda}</td>
+                                <td>{product.data_validade}</td>
                                 <td><FiTrash2 onClick={() => handleDeleteProduct(product.id)} /></td>
                             </tr>
                         ))}
