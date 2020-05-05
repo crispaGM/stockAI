@@ -17,6 +17,8 @@ export default function Register () {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [password_confirmation, setPasswordConfirmation] = useState('');
+    const [nome_estabelecimento, setNomeEstabelecimento] = useState('');
+    const [dominio, setDominio] = useState('');
 
     async function handleRegister (e) {
         e.preventDefault();
@@ -26,6 +28,8 @@ export default function Register () {
             email,
             password,
             password_confirmation,
+            nome_estabelecimento,
+            dominio,
         };
 
         try {
@@ -78,6 +82,22 @@ export default function Register () {
                     type="password"
                     value={password_confirmation}
                     onChange={e => setPasswordConfirmation(e.target.value)}
+                    required
+                />
+
+                <h5>Nome do estabelecimento</h5>
+                <input
+                    type="text"
+                    value={nome_estabelecimento}
+                    onChange={e => setNomeEstabelecimento(e.target.value)}
+                    required
+                />
+
+                <h5>Domínio</h5>
+                <input
+                    type="text"
+                    value={dominio}
+                    onChange={e => setDominio(e.target.value)}
                     required
                 />
 

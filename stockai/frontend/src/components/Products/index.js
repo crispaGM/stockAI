@@ -41,7 +41,7 @@ function RegisterProductModal (props) {
         };
 
         try {
-            const response = await api.post(`${userId}/product`, data);
+            const response = await api.post(`${userId}/produto`, data);
 
             history.push('/home');
         } catch (error) {
@@ -127,18 +127,17 @@ export default function Products () {
     const [modalShow, setModalShow] = useState(false);
     const [products, setProducts] = useState([]);
 
-    const name = localStorage.getItem('name');
     const userId = localStorage.getItem('userId');
 
     useEffect(() => {
-        api.get(`${userId}/product`).then(response => {
+        api.get(`${userId}/produto`).then(response => {
             setProducts(response.data);
         })
     }, [userId]);
 
     async function handleDeleteProduct (id) {
         try {
-            await api.delete(`${userId}/product/${id}`);
+            await api.delete(`${userId}/produto/${id}`);
 
             setProducts(products.filter(product => product.id !== id));
         } catch (error) {
